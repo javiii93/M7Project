@@ -15,6 +15,10 @@ public boolean isMesPagado() {
 public void setMesPagado(boolean mesPagado) {
 	this.mesPagado = mesPagado;
 }
+@Override
+public String toString() {
+	return "Cliente [cuotaMensual=" + cuotaMensual + ", mesPagado=" + mesPagado + "]";
+}
 
 	
 	

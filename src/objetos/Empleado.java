@@ -28,5 +28,10 @@ public float getSueldoMes() {
 public void setSueldoMes(float sueldoMes) {
 	this.sueldoMes = sueldoMes;
 }
+@Override
+public String toString() {
+	return "Empleado [cargo=" + cargo + ", jornadaHoras=" + jornadaHoras + ", precioHora=" + precioHora + ", sueldoMes="
+			+ sueldoMes + "]";
+}
 
 }
