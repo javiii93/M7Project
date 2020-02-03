@@ -7,17 +7,25 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import objetos.Cliente;
-import objetos.Empleado;
 import objetos.Empleados;
-import objetos.Persona;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 	@FXML
-	private TableView<String> tabla;
+	private MenuBar menuBar;
+	@FXML
+	private Menu menuGestion;
+	@FXML
+	private Menu menuEmp;
+	@FXML
+	private Menu menuClas;
+	@FXML
+	private Menu menuHorario;
 	ArrayList<Cliente> clientes = new ArrayList<>();
 	ArrayList<Empleados> empleados = new ArrayList<>();
 
@@ -47,11 +55,6 @@ public class Main extends Application {
 		clientes.add(new Cliente(101, 3, "89456665P", "Cash", true, 33.65f));
 		clientes.add(new Cliente(102, 4, "89456000J", "Transferencia", false, 55.9f));
 		clientes.add(new Cliente(103, 5, "3652147Q", "Cash", false, 39.14f));
-		
-		
-		
-		
-	
 	
 	}
 
