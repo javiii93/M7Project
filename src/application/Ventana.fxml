@@ -5,32 +5,41 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="620.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="620.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <MenuBar fx:id="menuBar" prefHeight="20.0" prefWidth="531.0">
+      <MenuBar fx:id="menuBar" prefHeight="32.0" prefWidth="549.0">
         <menus>
             <Menu fx:id="menuGestion" mnemonicParsing="false" text="Gestion">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem fx:id="add" mnemonicParsing="false" onAction="#actionMenu" text="Añadir" />
+                  <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#actionMenu" text="Eliminar" />
+                  <MenuItem fx:id="modify" mnemonicParsing="false" onAction="#actionMenu" text="Modificar" />
               </items>
             </Menu>
           <Menu fx:id="menuEmp" mnemonicParsing="false" text="Empleados">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="show" mnemonicParsing="false" onAction="#actionMenu" text="Listar" />
             </items>
           </Menu>
           <Menu fx:id="menuClas" mnemonicParsing="false" text="Clases">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="showClass" mnemonicParsing="false" onAction="#actionMenu" text="Mostrar" />
             </items>
           </Menu>
             <Menu fx:id="menuHorario" mnemonicParsing="false" text="Horarios">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem fx:id="showSche" mnemonicParsing="false" onAction="#actionMenu" text="Mostrar" />
               </items>
             </Menu>
         </menus>
       </MenuBar>
+      <Pane fx:id="paneAdd" layoutX="-2.0" layoutY="32.0" prefHeight="599.0" prefWidth="539.0" />
+      <Pane fx:id="paneDel" layoutY="31.0" prefHeight="599.0" prefWidth="539.0" />
+      <Pane fx:id="paneMod" layoutY="31.0" prefHeight="599.0" prefWidth="539.0" />
+      <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="609.0" prefWidth="549.0">
+         <children>
+            <Button layoutX="220.0" layoutY="210.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

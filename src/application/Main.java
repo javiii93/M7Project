@@ -16,18 +16,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
-	@FXML
-	private MenuBar menuBar;
-	@FXML
-	private Menu menuGestion;
-	@FXML
-	private Menu menuEmp;
-	@FXML
-	private Menu menuClas;
-	@FXML
-	private Menu menuHorario;
-	ArrayList<Cliente> clientes = new ArrayList<>();
-	ArrayList<Empleados> empleados = new ArrayList<>();
+	
+	public static ArrayList<Cliente> clientes = new ArrayList<>();
+	public static ArrayList<Empleados> empleados = new ArrayList<>();
 
 	@Override
 	public void start(Stage primaryStage) {
