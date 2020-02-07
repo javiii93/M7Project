@@ -3,17 +3,12 @@ package application;
 import java.util.ArrayList;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import objetos.Cliente;
 import objetos.Empleados;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
 	
@@ -25,7 +20,7 @@ public class Main extends Application {
 		try {
 			// BorderPane root = new BorderPane();
 			Parent root = FXMLLoader.load(getClass().getResource("Ventana.fxml"));
-			Scene scene = new Scene(root, 400, 400);
+			Scene scene = new Scene(root, 560,600 );
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
