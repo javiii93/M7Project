@@ -36,12 +36,12 @@ public class Main extends Application {
 	 public ObservableList<Empleados> getEmpData() {
 	        return empData;
 	    }
-	public void llenarArray() {
-		empleados.add(new Empleados(1, "45899581H", "gerente", false, false, false, false, false, false, false, 40, 100));
-		empleados.add(new Empleados(2, "25369841V", "profesor", true, false, false, false, false, false, true, 20, 50));
-		empleados.add(new Empleados(3, "17849652B", "profesor", false, true, false, false, false, true, false, 20, 70));
-		empleados.add(new Empleados(4, "88874569N", "profesor", false, false, true, false, true, false, false, 40, 20));
-		empleados.add(new Empleados(5, "98746321R", "profesor", false, false, false, true, false, false, true, 40, 10));
+	public static void llenarArray() {
+		empleados.add(new Empleados(1, "Manolo Escobar","45899581H", "gerente", false, false, false, false, false, false, false, 40, 100));
+		empleados.add(new Empleados(2, "Benito Garcia","25369841V", "profesor", true, false, false, false, false, false, true, 20, 50));
+		empleados.add(new Empleados(3,"Llorente Ruiz", "17849652B", "profesor", false, true, false, false, false, true, false, 20, 70));
+		empleados.add(new Empleados(4, "Maria Carrasco","88874569N", "profesor", false, false, true, false, true, false, false, 40, 20));
+		empleados.add(new Empleados(5, "Luis Comunica","98746321R", "profesor", false, false, false, true, false, false, true, 40, 10));
 		clientes.add(new Cliente(100, 2, "89456325G", "Transferencia", true, 33.65f));
 		clientes.add(new Cliente(101, 3, "89456665P", "Cash", true, 33.65f));
 		clientes.add(new Cliente(102, 4, "89456000J", "Transferencia", false, 55.9f));

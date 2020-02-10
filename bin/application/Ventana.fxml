@@ -40,7 +40,25 @@
       <Pane fx:id="paneAdd" layoutX="-2.0" layoutY="32.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneDel" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneMod" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
-      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
+      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="569.0" visible="false">
+         <children>
+            <TableView fx:id="empleadosView" layoutX="14.0" layoutY="14.0" prefHeight="613.0" prefWidth="540.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="28.0" text="id" />
+                <TableColumn fx:id="nombre" prefWidth="118.0" text="Nombre" />
+                  <TableColumn fx:id="dni" prefWidth="71.0" text="DNI" />
+                  <TableColumn fx:id="cargo" prefWidth="83.0" text="Cargo" />
+                  <TableColumn fx:id="spinning" prefWidth="39.0" text="Spinning" />
+                  <TableColumn fx:id="weights" prefWidth="46.0" text="Weights" />
+                  <TableColumn fx:id="culturismo" prefWidth="42.0" text="Culturismo" />
+                  <TableColumn fx:id="alterofilia" prefWidth="36.0" text="Alterofilia" />
+                  <TableColumn fx:id="running" prefWidth="38.0" text="Running" />
+                  <TableColumn fx:id="boxing" prefWidth="32.0" text="Boxing" />
+                  <TableColumn fx:id="natacion" prefWidth="34.0" text="Natacion" />
+                  <TableColumn fx:id="Horas" prefWidth="40.0" text="Horas" />
+              </columns>
+            </TableView>
+         </children></Pane>
       <Pane fx:id="paneShowClass" layoutX="-2.0" layoutY="31.0" prefHeight="629.0" prefWidth="570.0" visible="false" />
       <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="569.0">
          <children>
