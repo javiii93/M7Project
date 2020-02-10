@@ -3,15 +3,16 @@ package objetos;
 public class Empleados {
 	
 private int id;
-private String DNI, cargo;
+private String nombre, DNI, cargo;
 private boolean spinning, weights, culturismo, alterofilia, running, boxing, natacion;
 private float horasJornada, eurosHora, sueldoMes;
 
 
-public Empleados(int id, String dNI, String cargo, boolean spinning, boolean weights, boolean culturismo,
+public Empleados(int id,String nombre, String dNI, String cargo, boolean spinning, boolean weights, boolean culturismo,
 		boolean alterofilia, boolean running, boolean boxing, boolean natacion, float horasJornada, float eurosHora) {
 	super();
 	this.id = id;
+	this.nombre = nombre;
 	DNI = dNI;
 	this.cargo = cargo;
 	this.spinning = spinning;

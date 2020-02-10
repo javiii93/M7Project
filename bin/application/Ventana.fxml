@@ -57,17 +57,7 @@
       </Pane>
       <Pane fx:id="paneShowSche" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false">
          <children>
-            <TableView layoutX="-1.0" layoutY="100.0" prefHeight="294.0" prefWidth="569.0">
-              <columns>
-                <TableColumn prefWidth="88.0" text="Hora" />
-                <TableColumn prefWidth="77.0" text="Lunes" />
-                  <TableColumn prefWidth="82.0" text="Martes" />
-                  <TableColumn prefWidth="75.0" text="Miercoles" />
-                  <TableColumn prefWidth="77.0" text="Jueves" />
-                  <TableColumn prefWidth="78.0" text="Viernes" />
-                  <TableColumn prefWidth="91.0" text="Sabado" />
-              </columns>
-            </TableView>
+            <ImageView fx:id="horarioView" fitHeight="358.0" fitWidth="569.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>

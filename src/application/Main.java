@@ -3,18 +3,21 @@ package application;
 import java.util.ArrayList;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import objetos.Cliente;
 import objetos.Empleados;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 public class Main extends Application {
-	
+	private ObservableList<Empleados> empData = FXCollections.observableArrayList();
 	public static ArrayList<Cliente> clientes = new ArrayList<>();
 	public static ArrayList<Empleados> empleados = new ArrayList<>();
-
+	public static Image image;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -25,12 +28,14 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			llenarArray();
-			
+			image = new Image("file:horario.png");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	 public ObservableList<Empleados> getEmpData() {
+	        return empData;
+	    }
 	public void llenarArray() {
 		empleados.add(new Empleados(1, "45899581H", "gerente", false, false, false, false, false, false, false, 40, 100));
 		empleados.add(new Empleados(2, "25369841V", "profesor", true, false, false, false, false, false, true, 20, 50));

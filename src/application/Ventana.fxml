@@ -40,9 +40,28 @@
       <Pane fx:id="paneAdd" layoutX="-2.0" layoutY="32.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneDel" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneMod" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
-      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
+      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="569.0">
+         <children>
+            <TableView layoutX="14.0" layoutY="14.0" prefHeight="613.0" prefWidth="540.0">
+              <columns>
+                <TableColumn prefWidth="29.0" text="C1" />
+                <TableColumn prefWidth="97.0" text="C2" />
+                  <TableColumn prefWidth="99.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children></Pane>
       <Pane fx:id="paneShowClass" layoutX="-2.0" layoutY="31.0" prefHeight="629.0" prefWidth="570.0" visible="false" />
-      <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="569.0">
+      <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false">
          <children>
             <Label alignment="CENTER" layoutX="63.0" layoutY="224.0" prefHeight="103.0" prefWidth="420.0" text="Welcome a la App de Gestion del Gimnasio" textFill="#2d0fc3" textOverrun="CLIP" underline="true">
                <font>
@@ -57,17 +76,7 @@
       </Pane>
       <Pane fx:id="paneShowSche" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false">
          <children>
-            <TableView layoutX="-1.0" layoutY="100.0" prefHeight="294.0" prefWidth="569.0">
-              <columns>
-                <TableColumn prefWidth="88.0" text="Hora" />
-                <TableColumn prefWidth="77.0" text="Lunes" />
-                  <TableColumn prefWidth="82.0" text="Martes" />
-                  <TableColumn prefWidth="75.0" text="Miercoles" />
-                  <TableColumn prefWidth="77.0" text="Jueves" />
-                  <TableColumn prefWidth="78.0" text="Viernes" />
-                  <TableColumn prefWidth="91.0" text="Sabado" />
-              </columns>
-            </TableView>
+            <ImageView fx:id="horarioView" fitHeight="358.0" fitWidth="569.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>

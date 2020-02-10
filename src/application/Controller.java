@@ -8,13 +8,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class Controller implements Initializable {
 	private ArrayList<Pane> pane = new ArrayList<>();
 	@FXML
 	private Pane paneAdd, paneMod, paneDel, paneWelck, paneShow, paneShowClass, paneShowSche;
-
+	@FXML
+	private ImageView horarioView;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -26,6 +29,7 @@ public class Controller implements Initializable {
 		pane.add(paneMod);
 		pane.add(paneDel);
 		pane.add(paneWelck);
+		horarioView.setImage(Main.image);
 	}
 
 	@FXML
