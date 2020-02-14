@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="620.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <MenuBar fx:id="menuBar" prefHeight="32.0" prefWidth="569.0">
+      <MenuBar fx:id="menuBar" layoutY="-3.0" prefHeight="35.0" prefWidth="842.0">
         <menus>
             <Menu fx:id="menuGestion" mnemonicParsing="false" text="Gestion">
               <items>
@@ -40,29 +40,29 @@
       <Pane fx:id="paneAdd" layoutX="-2.0" layoutY="32.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneDel" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneMod" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
-      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="569.0" visible="false">
+      <Pane fx:id="paneShow" layoutX="1.0" layoutY="30.0" prefHeight="629.0" prefWidth="842.0" visible="false">
          <children>
-            <TableView fx:id="empleadosView" layoutX="14.0" layoutY="14.0" prefHeight="613.0" prefWidth="540.0">
+            <TableView fx:id="empleadosView" layoutX="5.0" layoutY="10.0" prefHeight="617.0" prefWidth="835.0">
               <columns>
                 <TableColumn fx:id="id" prefWidth="28.0" text="id" />
-                <TableColumn fx:id="nombre" prefWidth="118.0" text="Nombre" />
-                  <TableColumn fx:id="dni" prefWidth="71.0" text="DNI" />
-                  <TableColumn fx:id="cargo" prefWidth="83.0" text="Cargo" />
-                  <TableColumn fx:id="spinning" prefWidth="39.0" text="Spinning" />
-                  <TableColumn fx:id="weights" prefWidth="46.0" text="Weights" />
-                  <TableColumn fx:id="culturismo" prefWidth="42.0" text="Culturismo" />
-                  <TableColumn fx:id="alterofilia" prefWidth="36.0" text="Alterofilia" />
-                  <TableColumn fx:id="running" prefWidth="38.0" text="Running" />
-                  <TableColumn fx:id="boxing" prefWidth="32.0" text="Boxing" />
-                  <TableColumn fx:id="natacion" prefWidth="34.0" text="Natacion" />
-                  <TableColumn fx:id="Horas" prefWidth="40.0" text="Horas" />
+                <TableColumn fx:id="nombre" prefWidth="147.0" text="Nombre" />
+                  <TableColumn fx:id="dni" prefWidth="81.0" text="DNI" />
+                  <TableColumn fx:id="cargo" prefWidth="62.0" text="Cargo" />
+                  <TableColumn fx:id="spinning" minWidth="0.0" prefWidth="40.0" text="Spinning" />
+                  <TableColumn fx:id="weights" minWidth="0.0" prefWidth="43.0" text="Weights" />
+                  <TableColumn fx:id="culturismo" minWidth="0.0" prefWidth="40.0" text="Culturismo" />
+                  <TableColumn fx:id="alterofilia" minWidth="0.0" prefWidth="40.0" text="Alterofilia" />
+                  <TableColumn fx:id="running" minWidth="0.0" prefWidth="37.0" text="Running" />
+                  <TableColumn fx:id="boxing" minWidth="0.0" prefWidth="35.0" text="Boxing" />
+                  <TableColumn fx:id="natacion" minWidth="0.0" prefWidth="54.0" text="Natacion" />
+                  <TableColumn fx:id="Horas" minWidth="0.0" prefWidth="227.0" text="Horas" />
               </columns>
             </TableView>
          </children></Pane>
       <Pane fx:id="paneShowClass" layoutX="-2.0" layoutY="31.0" prefHeight="629.0" prefWidth="570.0" visible="false" />
-      <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="569.0">
+      <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="842.0">
          <children>
-            <Label alignment="CENTER" layoutX="63.0" layoutY="224.0" prefHeight="103.0" prefWidth="420.0" text="Welcome a la App de Gestion del Gimnasio" textFill="#2d0fc3" textOverrun="CLIP" underline="true">
+            <Label alignment="CENTER" layoutX="211.0" layoutY="229.0" prefHeight="103.0" prefWidth="420.0" text="Welcome a la App de Gestion del Gimnasio" textFill="#2d0fc3" textOverrun="CLIP" underline="true">
                <font>
                   <Font name="System Bold Italic" size="19.0" />
                </font>
@@ -70,7 +70,7 @@
                   <DropShadow />
                </effect>
             </Label>
-            <Text fill="#1008c2" layoutX="324.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javier Linde Maldonado" wrappingWidth="177.6708984375" />
+            <Text fill="#1008c2" layoutX="344.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Javier Linde Maldonado" wrappingWidth="177.6708984375" />
          </children>
       </Pane>
       <Pane fx:id="paneShowSche" layoutY="31.0" prefHeight="629.0" prefWidth="569.0" visible="false">

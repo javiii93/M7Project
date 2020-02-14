@@ -10,16 +10,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import objetos.Cliente;
 import objetos.Empleados;
 
 public class Controller implements Initializable {
 	private ArrayList<Pane> pane = new ArrayList<>();
+	private static ArrayList<Empleados> employeed = new ArrayList<>();
+	private static ArrayList<Cliente> clientes = new ArrayList<>();
 	@FXML
 	private Pane paneAdd, paneMod, paneDel, paneWelck, paneShow, paneShowClass, paneShowSche;
 	@FXML
@@ -27,37 +31,51 @@ public class Controller implements Initializable {
 	@FXML
 	private TableView<Empleados> empleadosView;
 	@FXML
-	private TableColumn<Empleados, Integer> id;
+	private  TableColumn<Empleados, Integer> id;
 	@FXML
-	private TableColumn<Empleados, String> nombre;
+	private  TableColumn<Empleados, String> nombre;
 	@FXML
-	private TableColumn<Empleados, String> dni;
+	private  TableColumn<Empleados, String> dni;
 	@FXML
-	private TableColumn<Empleados, String> cargo;
+	private  TableColumn<Empleados, String> cargo;
 	@FXML
-	private TableColumn<Empleados, Boolean> spinning;
+	private  TableColumn<Empleados, CheckBox> spinning;
 	@FXML
-	private TableColumn<Empleados, Boolean> weights;
+	private  TableColumn<Empleados, CheckBox> weights;
 	@FXML
-	private TableColumn<Empleados, Boolean> culturismo;
+	private  TableColumn<Empleados, CheckBox> culturismo;
 	@FXML
-	private TableColumn<Empleados, Boolean> alterofilia;
+	private  TableColumn<Empleados, CheckBox> alterofilia;
 	@FXML
-	private TableColumn<Empleados, Boolean> running;
+	private  TableColumn<Empleados, CheckBox> running;
 	@FXML
-	private TableColumn<Empleados, Boolean> boxing;
+	private  TableColumn<Empleados, CheckBox> boxing;
 	@FXML
-	private TableColumn<Empleados, Boolean> natacion;
+	private  TableColumn<Empleados, CheckBox> natacion;
 	@FXML
-	private TableColumn<Empleados, Float> Horas;
+	private  TableColumn<Empleados, Float> Horas;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		/*
-		 * paneAdd.setVisible(false); paneMod.setVisible(false);
-		 * paneDel.setVisible(false); paneWelck.setVisible(true);
-		 */
+		
+		llenarArray();
+		ObservableList<Empleados> obsEmp = FXCollections.observableArrayList(employeed);
+		id.setCellValueFactory(new PropertyValueFactory<Empleados, Integer>("id2"));
+		nombre.setCellValueFactory(new PropertyValueFactory<Empleados, String>("nombre"));
+		dni.setCellValueFactory(new PropertyValueFactory<Empleados, String>("DNI"));
+		cargo.setCellValueFactory(new PropertyValueFactory<Empleados, String>("cargo"));
+		spinning.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("spinning"));
+		weights.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("weights"));
+		culturismo.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("culturismo"));
+		alterofilia.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("alterofilia"));
+		running.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("running"));
+		boxing.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("boxing"));
+		natacion.setCellValueFactory(new PropertyValueFactory<Empleados, CheckBox>("natacion"));
+		Horas.setCellValueFactory(new PropertyValueFactory<Empleados, Float>("horasJornada"));
+		empleadosView.setItems(obsEmp);
+		empleadosView.setEditable(false);
+		
 		pane.add(paneAdd);
 		pane.add(paneMod);
 		pane.add(paneDel);
@@ -66,21 +84,7 @@ public class Controller implements Initializable {
 		pane.add(paneShowSche);
 		pane.add(paneShow);
 		horarioView.setImage(Main.image);
-		ObservableList<Empleados> obsEmp = FXCollections.observableArrayList(Main.empleados);
-		id.setCellValueFactory(new PropertyValueFactory<Empleados, Integer>("id2"));
-		nombre.setCellValueFactory(new PropertyValueFactory<Empleados, String>("nombre"));
-		dni.setCellValueFactory(new PropertyValueFactory<Empleados, String>("DNI"));
-		cargo.setCellValueFactory(new PropertyValueFactory<Empleados, String>("cargo"));
-		spinning.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("spinning"));
-		weights.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("weights"));
-		culturismo.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("culturismo"));
-		alterofilia.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("alterofilia"));
-		running.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("running"));
-		boxing.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("boxing"));
-		natacion.setCellValueFactory(new PropertyValueFactory<Empleados, Boolean>("natacion"));
-		Horas.setCellValueFactory(new PropertyValueFactory<Empleados, Float>("horasJornada"));
-
-		empleadosView.setItems(obsEmp);
+		
 	}
 
 	@FXML
@@ -109,6 +113,27 @@ public class Controller implements Initializable {
 		default:
 			break;
 		}
+
+	}
+
+
+	public static void llenarArray() {
+		employeed.add(new Empleados(1, "Manolo Escobar", "45899581H", "gerente", 40, 100));
+		employeed.add(new Empleados(2, "Benito Garcia", "25369841V", "profesor", 20, 50));
+		employeed.add(new Empleados(3, "Llorente Ruiz", "17849652B", "profesor", 20, 70));
+		employeed.add(new Empleados(4, "Maria Carrasco", "88874569N", "profesor", 40, 20));
+		employeed.add(new Empleados(5, "Luis Comunica", "98746321R", "profesor", 40, 10));
+		employeed.get(2).getBoxing().setSelected(true);
+		employeed.get(3).getAlterofilia().setSelected(true);
+		employeed.get(1).getNatacion().setSelected(true);
+		employeed.get(1).getCulturismo().setSelected(true);
+		employeed.get(3).getRunning().setSelected(true);
+		employeed.get(2).getSpinning().setSelected(true);
+		employeed.get(3).getWeights().setSelected(true);
+		clientes.add(new Cliente(100, 2, "89456325G", "Transferencia", true, 33.65f));
+		clientes.add(new Cliente(101, 3, "89456665P", "Cash", true, 33.65f));
+		clientes.add(new Cliente(102, 4, "89456000J", "Transferencia", false, 55.9f));
+		clientes.add(new Cliente(103, 5, "3652147Q", "Cash", false, 39.14f));
 
 	}
 

@@ -1,148 +1,143 @@
 package objetos;
 
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleFloatProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.CheckBox;
 
 public class Empleados {
 
-	private SimpleIntegerProperty id2;
-	private SimpleStringProperty nombre, DNI, cargo;
-	private SimpleBooleanProperty spinning, weights, culturismo, alterofilia, running, boxing, natacion;
-	private SimpleFloatProperty horasJornada, eurosHora, sueldoMes;
+	private int id2;
+	private String nombre, DNI, cargo;
+	private CheckBox spinning, weights, culturismo, alterofilia, running, boxing, natacion;
+	private float horasJornada, eurosHora, sueldoMes;
 
-	public Empleados(int id, String nombre, String dNI, String cargo, boolean spinning, boolean weights,
-			boolean culturismo, boolean alterofilia, boolean running, boolean boxing, boolean natacion,
-			float horasJornada, float eurosHora) {
+	public Empleados(int id2, String nombre, String dNI, String cargo, float horasJornada, float eurosHora) {
 		super();
-		this.id2 = new SimpleIntegerProperty(id);
-		this.nombre = new SimpleStringProperty(nombre);
-		DNI = new SimpleStringProperty(dNI);;
-		this.cargo = new SimpleStringProperty(cargo);
-		this.spinning = new SimpleBooleanProperty(spinning);
-		this.weights = new SimpleBooleanProperty(weights);
-		this.culturismo = new SimpleBooleanProperty(culturismo);
-		this.alterofilia = new SimpleBooleanProperty(alterofilia);
-		this.running = new SimpleBooleanProperty(running);
-		this.boxing = new SimpleBooleanProperty(boxing);
-		this.natacion =new SimpleBooleanProperty(natacion) ;
-		this.horasJornada = new SimpleFloatProperty(horasJornada);
-		this.eurosHora = new SimpleFloatProperty(eurosHora);
+		this.id2 = id2;
+		this.nombre = nombre;
+		DNI = dNI;
+		this.cargo = cargo;
+		this.spinning = new CheckBox();
+		this.weights = new CheckBox();
+		this.culturismo = new CheckBox();
+		this.alterofilia = new CheckBox();
+		this.running = new CheckBox();
+		this.boxing = new CheckBox();
+		this.natacion = new CheckBox();
+		this.horasJornada = horasJornada;
+		this.eurosHora = eurosHora;
+		this.sueldoMes = horasJornada * eurosHora;
+		;
 	}
 
-	public SimpleIntegerProperty getId2() {
+	public int getId2() {
 		return id2;
 	}
 
-	public void setId2(SimpleIntegerProperty id2) {
+	public void setId2(int id2) {
 		this.id2 = id2;
 	}
 
-	public SimpleStringProperty getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(SimpleStringProperty nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public SimpleStringProperty getDNI() {
+	public String getDNI() {
 		return DNI;
 	}
 
-	public void setDNI(SimpleStringProperty dNI) {
+	public void setDNI(String dNI) {
 		DNI = dNI;
 	}
 
-	public SimpleStringProperty getCargo() {
+	public String getCargo() {
 		return cargo;
 	}
 
-	public void setCargo(SimpleStringProperty cargo) {
+	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
 
-	public SimpleBooleanProperty getSpinning() {
+	public CheckBox getSpinning() {
 		return spinning;
 	}
 
-	public void setSpinning(SimpleBooleanProperty spinning) {
+	public void setSpinning(CheckBox spinning) {
 		this.spinning = spinning;
 	}
 
-	public SimpleBooleanProperty getWeights() {
+	public CheckBox getWeights() {
 		return weights;
 	}
 
-	public void setWeights(SimpleBooleanProperty weights) {
+	public void setWeights(CheckBox weights) {
 		this.weights = weights;
 	}
 
-	public SimpleBooleanProperty getCulturismo() {
+	public CheckBox getCulturismo() {
 		return culturismo;
 	}
 
-	public void setCulturismo(SimpleBooleanProperty culturismo) {
+	public void setCulturismo(CheckBox culturismo) {
 		this.culturismo = culturismo;
 	}
 
-	public SimpleBooleanProperty getAlterofilia() {
+	public CheckBox getAlterofilia() {
 		return alterofilia;
 	}
 
-	public void setAlterofilia(SimpleBooleanProperty alterofilia) {
+	public void setAlterofilia(CheckBox alterofilia) {
 		this.alterofilia = alterofilia;
 	}
 
-	public SimpleBooleanProperty getRunning() {
+	public CheckBox getRunning() {
 		return running;
 	}
 
-	public void setRunning(SimpleBooleanProperty running) {
+	public void setRunning(CheckBox running) {
 		this.running = running;
 	}
 
-	public SimpleBooleanProperty getBoxing() {
+	public CheckBox getBoxing() {
 		return boxing;
 	}
 
-	public void setBoxing(SimpleBooleanProperty boxing) {
+	public void setBoxing(CheckBox boxing) {
 		this.boxing = boxing;
 	}
 
-	public SimpleBooleanProperty getNatacion() {
+	public CheckBox getNatacion() {
 		return natacion;
 	}
 
-	public void setNatacion(SimpleBooleanProperty natacion) {
+	public void setNatacion(CheckBox natacion) {
 		this.natacion = natacion;
 	}
 
-	public SimpleFloatProperty getHorasJornada() {
+	public float getHorasJornada() {
 		return horasJornada;
 	}
 
-	public void setHorasJornada(SimpleFloatProperty horasJornada) {
+	public void setHorasJornada(float horasJornada) {
 		this.horasJornada = horasJornada;
 	}
 
-	public SimpleFloatProperty getEurosHora() {
+	public float getEurosHora() {
 		return eurosHora;
 	}
 
-	public void setEurosHora(SimpleFloatProperty eurosHora) {
+	public void setEurosHora(float eurosHora) {
 		this.eurosHora = eurosHora;
 	}
 
-	public SimpleFloatProperty getSueldoMes() {
+	public float getSueldoMes() {
 		return sueldoMes;
 	}
 
-	public void setSueldoMes(SimpleFloatProperty sueldoMes) {
+	public void setSueldoMes(float sueldoMes) {
 		this.sueldoMes = sueldoMes;
 	}
-
-
 
 }
