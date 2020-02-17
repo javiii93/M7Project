@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
@@ -11,12 +12,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import objetos.Cliente;
 import objetos.Empleados;
 
@@ -25,40 +29,44 @@ public class Controller implements Initializable {
 	private static ArrayList<Empleados> employeed = new ArrayList<>();
 	private static ArrayList<Cliente> clientes = new ArrayList<>();
 	@FXML
+	private ContextMenu contextMenu;
+	@FXML
+	public static Label labelInforme;
+	@FXML
 	private Pane paneAdd, paneMod, paneDel, paneWelck, paneShow, paneShowClass, paneShowSche;
 	@FXML
 	private ImageView horarioView;
 	@FXML
 	private TableView<Empleados> empleadosView;
 	@FXML
-	private  TableColumn<Empleados, Integer> id;
+	private TableColumn<Empleados, Integer> id;
 	@FXML
-	private  TableColumn<Empleados, String> nombre;
+	private TableColumn<Empleados, String> nombre;
 	@FXML
-	private  TableColumn<Empleados, String> dni;
+	private TableColumn<Empleados, String> dni;
 	@FXML
-	private  TableColumn<Empleados, String> cargo;
+	private TableColumn<Empleados, String> cargo;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> spinning;
+	private TableColumn<Empleados, CheckBox> spinning;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> weights;
+	private TableColumn<Empleados, CheckBox> weights;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> culturismo;
+	private TableColumn<Empleados, CheckBox> culturismo;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> alterofilia;
+	private TableColumn<Empleados, CheckBox> alterofilia;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> running;
+	private TableColumn<Empleados, CheckBox> running;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> boxing;
+	private TableColumn<Empleados, CheckBox> boxing;
 	@FXML
-	private  TableColumn<Empleados, CheckBox> natacion;
+	private TableColumn<Empleados, CheckBox> natacion;
 	@FXML
-	private  TableColumn<Empleados, Float> Horas;
+	private TableColumn<Empleados, Float> Horas;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		
+
 		llenarArray();
 		ObservableList<Empleados> obsEmp = FXCollections.observableArrayList(employeed);
 		id.setCellValueFactory(new PropertyValueFactory<Empleados, Integer>("id2"));
@@ -75,7 +83,7 @@ public class Controller implements Initializable {
 		Horas.setCellValueFactory(new PropertyValueFactory<Empleados, Float>("horasJornada"));
 		empleadosView.setItems(obsEmp);
 		empleadosView.setEditable(false);
-		
+
 		pane.add(paneAdd);
 		pane.add(paneMod);
 		pane.add(paneDel);
@@ -84,7 +92,7 @@ public class Controller implements Initializable {
 		pane.add(paneShowSche);
 		pane.add(paneShow);
 		horarioView.setImage(Main.image);
-		
+
 	}
 
 	@FXML
@@ -116,6 +124,11 @@ public class Controller implements Initializable {
 
 	}
 
+	@FXML
+	public void contextMenuAction() throws Exception {
+		AppInformation appInf = new AppInformation();
+		appInf.start(new Stage());
+	}
 
 	public static void llenarArray() {
 		employeed.add(new Empleados(1, "Manolo Escobar", "45899581H", "gerente", 40, 100));
@@ -134,6 +147,11 @@ public class Controller implements Initializable {
 		clientes.add(new Cliente(101, 3, "89456665P", "Cash", true, 33.65f));
 		clientes.add(new Cliente(102, 4, "89456000J", "Transferencia", false, 55.9f));
 		clientes.add(new Cliente(103, 5, "3652147Q", "Cash", false, 39.14f));
+
+	}
+
+	@FXML
+	public void añadirEmpleado() {
 
 	}
 
