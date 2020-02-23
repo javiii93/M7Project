@@ -12,6 +12,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
+
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.SelectionMode;
@@ -29,6 +32,10 @@ public class Controller implements Initializable {
 	private static ArrayList<Empleados> employee,delEmployee;
 	private static ArrayList<Cliente> clientes = new ArrayList<>();
 	@FXML
+	private ContextMenu contextMenu;
+	@FXML
+	public static Label labelInforme;
+	@FXML
 	private Pane paneAdd, paneMod, paneDel, paneWelck, paneShow, paneShowClass, paneShowSche;
 	@FXML
 	private ImageView horarioView;
@@ -44,7 +51,9 @@ public class Controller implements Initializable {
 	private TableColumn<Empleados, Float> Horas;
 	@FXML
 	private ListView<Empleados> empView, delEmpView;
+	@FXML
 	private Button cancel, delEmp, confirm;
+
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -72,7 +81,6 @@ public class Controller implements Initializable {
 		empView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		delEmpView.setItems(obsEmpDel);
 		delEmpView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-
 		pane.add(paneAdd);
 		pane.add(paneMod);
 		pane.add(paneDel);
@@ -112,6 +120,8 @@ public class Controller implements Initializable {
 		default:
 			break;
 		}
+	
+
 	}
 
 	@FXML
@@ -143,6 +153,12 @@ public class Controller implements Initializable {
 
 	}
 
+	/*@FXML
+	public void contextMenuAction() throws Exception {
+		AppInformation appInf = new AppInformation();
+		appInf.start(new Stage());
+	}*/
+
 	public static void llenarArray() {
 		delEmployee=new ArrayList<>();
 		employee = new ArrayList<>();
@@ -162,6 +178,11 @@ public class Controller implements Initializable {
 		clientes.add(new Cliente(101, 3, "89456665P", "Cash", true, 33.65f));
 		clientes.add(new Cliente(102, 4, "89456000J", "Transferencia", false, 55.9f));
 		clientes.add(new Cliente(103, 5, "3652147Q", "Cash", false, 39.14f));
+
+	}
+
+	@FXML
+	public void añadirEmpleado() {
 
 	}
 

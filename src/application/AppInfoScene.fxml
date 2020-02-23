@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="438.0" prefWidth="506.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label alignment="CENTER" layoutX="4.0" layoutY="1.0" prefHeight="35.0" prefWidth="500.0" text="Gym Manager App Information">
+         <font>
+            <Font name="Frank Ruehl CLM Medium" size="33.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="14.0" layoutY="39.0" prefHeight="396.0" prefWidth="477.0" text="App Detail Infomation, App Infomation&#10;&#10;Try this app when you want to know what kind of User apps and &#10;System apps are installed in your phone and the information of&#10; the apps.&#10;&#10;You can uninstall application and force stop the application.&#10;&#10;In the storage area, you can delete the application clear data &#10;(initialize), clear cache, and see the information such as Data&#10; usage, Permissions and notification at a glance.&#10;&#10;This app is convenient for users who do not know how to use&#10; smartphone." />
+   </children>
+</AnchorPane>

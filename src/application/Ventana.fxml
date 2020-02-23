@@ -31,9 +31,9 @@
               <MenuItem fx:id="show" mnemonicParsing="false" onAction="#actionMenu" text="Listar" />
             </items>
           </Menu>
-          <Menu fx:id="menuClas" mnemonicParsing="false" text="Clases">
+          <Menu fx:id="menuClas" mnemonicParsing="false" text="Informes">
             <items>
-              <MenuItem fx:id="showClass" mnemonicParsing="false" onAction="#actionMenu" text="Mostrar" />
+              <MenuItem fx:id="showClass" mnemonicParsing="false" onAction="#actionMenu" text="De Empleados" />
             </items>
           </Menu>
             <Menu fx:id="menuHorario" mnemonicParsing="false" text="Horarios">
@@ -42,6 +42,13 @@
               </items>
             </Menu>
         </menus>
+         <contextMenu>
+            <ContextMenu fx:id="contextMenu" onAction="#contextMenuAction">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Informacion de la App" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
       </MenuBar>
       <Pane fx:id="paneAdd" layoutX="-2.0" layoutY="32.0" prefHeight="629.0" prefWidth="569.0" visible="false" />
       <Pane fx:id="paneDel" layoutY="31.0" prefHeight="629.0" prefWidth="842.0" visible="false">
@@ -73,7 +80,10 @@
               </columns>
             </TableView>
          </children></Pane>
-      <Pane fx:id="paneShowClass" layoutX="-2.0" layoutY="31.0" prefHeight="629.0" prefWidth="570.0" visible="false" />
+      <Pane fx:id="paneShowClass" layoutX="-2.0" layoutY="31.0" prefHeight="629.0" prefWidth="842.0" visible="false">
+         <children>
+            <Label fx:id="labelInforme" prefHeight="35.0" prefWidth="250.0" text="Redirigiendo a Generar Informes" />
+         </children></Pane>
       <Pane fx:id="paneWelck" layoutY="31.0" prefHeight="629.0" prefWidth="842.0">
          <children>
             <Label alignment="CENTER" layoutX="211.0" layoutY="229.0" prefHeight="103.0" prefWidth="420.0" text="Welcome a la App de Gestion del Gimnasio" textFill="#2d0fc3" textOverrun="CLIP" underline="true">
