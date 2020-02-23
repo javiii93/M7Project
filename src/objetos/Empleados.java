@@ -140,4 +140,11 @@ public class Empleados {
 		this.sueldoMes = sueldoMes;
 	}
 
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + ", DNI: " + DNI + ", Cargo: " + cargo + ", Jornada: "
+				+ horasJornada + "h, " + eurosHora + "€/h, Sueldo: " + sueldoMes;
+	}
+	
+
 }
